@@ -25,7 +25,7 @@ public class WordGenerator {
         configuration = new Configuration();
         configuration.setDefaultEncoding("utf-8");
         try {
-            configuration.setDirectoryForTemplateLoading(new File("./"));
+            configuration.setDirectoryForTemplateLoading(new File(WordGenerator.class.getResource("/").getFile()));
         } catch (IOException e) {
             e.printStackTrace();
         }
